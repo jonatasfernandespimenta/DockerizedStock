@@ -1,0 +1,37 @@
+version: "3.5"
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  db:
+    image: mongo
+    restart: always
+    container_name: stock-db
+    volumes:
+        - data-node:/data/stock-db
+    ports:
+        - 27017:27017
+    command: mongod --noauth
+    networks:
+        - app-tier
+
+  api:
+    build: ./services/api
+    networks:
+      - app-tier 
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    container_name: stock-backend
+
+  client:
+    container_name: stock-website
+    build: ./services/client
+    ports:
+      - "80:80"
+
+volumes:
+  data-node:
