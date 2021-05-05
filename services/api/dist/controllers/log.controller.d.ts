@@ -1,3 +1,4 @@
+import { LogViewModel } from 'src/domains/log.viewmodel';
 import { LogService } from 'src/services/log.service';
 export declare class LogController {
     private logService;
@@ -6,5 +7,5 @@ export declare class LogController {
         product: any[];
     }>;
     removeLog(params: any): Promise<import("../domains/schemas/log.schema").Log>;
-    createLog(body: any): Promise<import("../domains/schemas/log.schema").Log>;
+    createLog(body: LogViewModel): Promise<import("../domains/schemas/log.schema").Log>;
 }

@@ -28,7 +28,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     common_1.Module({
         imports: [
-            mongoose_1.MongooseModule.forRoot('mongodb://stock-db/estoquedb', {
+            mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017/estoquedb', {
                 useFindAndModify: false
             }),
             mongoose_1.MongooseModule.forFeature([

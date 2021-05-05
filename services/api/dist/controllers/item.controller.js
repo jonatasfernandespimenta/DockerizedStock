@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const path_1 = require("path");
 const item_viewmodel_1 = require("../domains/item.viewmodel");
 const item_service_1 = require("../services/item.service");
@@ -38,12 +39,18 @@ let ItemController = class ItemController {
     }
 };
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: item_viewmodel_1.ItemViewModel,
+    }),
     common_1.Get('/'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ItemController.prototype, "getItems", null);
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: item_viewmodel_1.ItemViewModel,
+    }),
     common_1.Get('/:id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
@@ -58,6 +65,9 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ItemController.prototype, "createItem", null);
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: item_viewmodel_1.ItemViewModel,
+    }),
     common_1.Get('delete/:id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
@@ -65,6 +75,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ItemController.prototype, "updateItem", null);
 ItemController = __decorate([
+    swagger_1.ApiTags('items'),
     common_1.Controller('item'),
     __metadata("design:paramtypes", [item_service_1.ItemService])
 ], ItemController);

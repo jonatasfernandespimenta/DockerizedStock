@@ -1,13 +1,14 @@
-import { ProductViewModel } from 'src/domains/product.viewmodel';
-import { ProductService } from 'src/services/product.service';
+import { Product } from 'src/domains/schemas/product.schema';
+import { ProductViewModel } from '../domains/product.viewmodel';
+import { ProductService } from '../services/product.service';
 export declare class ProductController {
     private productService;
     constructor(productService: ProductService);
-    getProducts(): Promise<import("../domains/schemas/product.schema").Product[]>;
-    getProduct(params: any): Promise<import("../domains/schemas/product.schema").Product>;
-    delProduct(params: any): Promise<import("../domains/schemas/product.schema").Product>;
-    createProduct(product: ProductViewModel): Promise<import("../domains/schemas/product.schema").Product>;
-    updateProduct(product: ProductViewModel, params: any): Promise<import("../domains/schemas/product.schema").Product>;
-    updateProductQty(product: any, params: any): Promise<import("../domains/schemas/product.schema").Product>;
-    getByNameOrSku(params: any): Promise<import("../domains/schemas/product.schema").Product[]>;
+    getProducts(): Promise<Product[]>;
+    getProduct(params: any): Promise<Product>;
+    delProduct(params: any): Promise<Product>;
+    createProduct(product: ProductViewModel): Promise<Product>;
+    updateProduct(product: ProductViewModel, params: any): Promise<Product>;
+    updateProductQty(product: any, params: any): Promise<Product>;
+    getByNameOrSku(params: any): Promise<Product[]>;
 }

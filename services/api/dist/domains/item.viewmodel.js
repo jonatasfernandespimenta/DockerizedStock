@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemViewModel = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class ItemViewModel {
     constructor(createdAt, sku) {
@@ -18,8 +19,33 @@ class ItemViewModel {
     }
 }
 __decorate([
+    swagger_1.ApiProperty({
+        example: 'papel branco fosco',
+        description: 'Nome do produto'
+    }),
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], ItemViewModel.prototype, "sku", void 0);
+__decorate([
+    swagger_1.ApiProperty({
+        example: 3,
+        description: 'Quantidade de itens que irão entrar para o estoque'
+    }),
+    __metadata("design:type", Number)
+], ItemViewModel.prototype, "quantity", void 0);
+__decorate([
+    swagger_1.ApiProperty({
+        example: 'papel branco fosco',
+        description: 'Nome do produto'
+    }),
+    __metadata("design:type", String)
+], ItemViewModel.prototype, "productName", void 0);
+__decorate([
+    swagger_1.ApiProperty({
+        example: new Date(),
+        description: 'Data de criação'
+    }),
+    __metadata("design:type", Date)
+], ItemViewModel.prototype, "createdAt", void 0);
 exports.ItemViewModel = ItemViewModel;
 //# sourceMappingURL=item.viewmodel.js.map

@@ -1,5 +1,5 @@
-import { ProductViewModel } from 'src/domains/product.viewmodel';
-import { ProductRepository } from 'src/repositories/product.respository';
+import { ProductViewModel } from '../domains/product.viewmodel';
+import { ProductRepository } from '../repositories/product.respository';
 export declare class ProductService {
     readonly productRepository: ProductRepository;
     constructor(productRepository: ProductRepository);

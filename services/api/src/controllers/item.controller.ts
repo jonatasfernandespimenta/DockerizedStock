@@ -1,18 +1,26 @@
 import { Body, Controller, Delete, Get, Header, HttpCode, HttpStatus, Param, Post, Res } from '@nestjs/common';
+import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { createReadStream } from 'fs';
 import { join } from 'path';
 import { ItemViewModel } from 'src/domains/item.viewmodel';
 import { ItemService } from 'src/services/item.service';
 
+@ApiTags('items')
 @Controller('item')
 export class ItemController {
   constructor(private itemService: ItemService) {  }
 
+  @ApiCreatedResponse({
+    type: ItemViewModel,
+  })
   @Get('/')
   async getItems() {
     return this.itemService.getItems();
   }
 
+  @ApiCreatedResponse({
+    type: ItemViewModel,
+  })
   @Get('/:id')
   async getItem(@Param() params) {
     return this.itemService.getItem(params.id);
@@ -26,6 +34,9 @@ export class ItemController {
     }
   }
 
+  @ApiCreatedResponse({
+    type: ItemViewModel,
+  })
   @Get('delete/:id')
   async updateItem(@Param() params) {
     return this.itemService.removeItem(params.id);

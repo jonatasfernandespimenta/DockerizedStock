@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { ProductViewModel } from 'src/domains/product.viewmodel';
-import { ProductRepository } from 'src/repositories/product.respository';
+import { ProductViewModel } from '../domains/product.viewmodel';
+import { ProductRepository } from '../repositories/product.respository';
 
 @Injectable()
 export class ProductService {

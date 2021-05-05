@@ -15,9 +15,11 @@ import { ItemRepository } from './repositories/item.repository';
 import { LogSchema } from './domains/schemas/log.schema';
 import { LogRepository } from './repositories/log.repository';
 
+// mongodb://stock-db/estoquedb
+
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://stock-db/estoquedb', {
+    MongooseModule.forRoot('mongodb://localhost:27017/estoquedb', {
       useFindAndModify: false
     }),
     MongooseModule.forFeature([

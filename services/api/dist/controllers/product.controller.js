@@ -14,6 +14,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
+const product_schema_1 = require("../domains/schemas/product.schema");
 const product_viewmodel_1 = require("../domains/product.viewmodel");
 const product_service_1 = require("../services/product.service");
 let ProductController = class ProductController {
@@ -43,12 +45,18 @@ let ProductController = class ProductController {
     }
 };
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: product_viewmodel_1.ProductViewModel,
+    }),
     common_1.Get('/'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "getProducts", null);
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: product_viewmodel_1.ProductViewModel,
+    }),
     common_1.Get('/:id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
@@ -56,6 +64,10 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "getProduct", null);
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        description: 'The record has been successfully deleted.',
+        type: product_viewmodel_1.ProductViewModel,
+    }),
     common_1.Delete('/:id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
@@ -84,6 +96,9 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "updateProductQty", null);
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: product_viewmodel_1.ProductViewModel,
+    }),
     common_1.Get('/name/:param'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
@@ -91,6 +106,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "getByNameOrSku", null);
 ProductController = __decorate([
+    swagger_1.ApiTags('products'),
     common_1.Controller('products'),
     __metadata("design:paramtypes", [product_service_1.ProductService])
 ], ProductController);

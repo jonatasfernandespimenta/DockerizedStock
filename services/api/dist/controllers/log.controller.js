@@ -14,6 +14,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LogController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
+const log_viewmodel_1 = require("../domains/log.viewmodel");
 const log_service_1 = require("../services/log.service");
 let LogController = class LogController {
     constructor(logService) {
@@ -30,12 +32,19 @@ let LogController = class LogController {
     }
 };
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        type: log_viewmodel_1.LogViewModel,
+    }),
     common_1.Get('/'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], LogController.prototype, "getLog", null);
 __decorate([
+    swagger_1.ApiCreatedResponse({
+        description: 'The record has been successfully deleted.',
+        type: log_viewmodel_1.LogViewModel,
+    }),
     common_1.Delete('/:id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
@@ -46,10 +55,11 @@ __decorate([
     common_1.Post('/'),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [log_viewmodel_1.LogViewModel]),
     __metadata("design:returntype", Promise)
 ], LogController.prototype, "createLog", null);
 LogController = __decorate([
+    swagger_1.ApiTags('logs'),
     common_1.Controller('/log'),
     __metadata("design:paramtypes", [log_service_1.LogService])
 ], LogController);
