@@ -30,7 +30,7 @@ export class ItemService {
     const foundItem = await this.itemRepository.getById(id);
     
     const productList = await this.productRepository.getProducts();
-    
+
     const foundProduct = productList.find(
       product => product.sku === foundItem.sku
     );
@@ -59,7 +59,7 @@ export class ItemService {
       const foundProduct = productList.find(
         product => product.sku === newItem.sku
       );
-  
+
       const createdItem = await this.itemRepository.createItem(newItem);
       
       let itens = []; 
@@ -85,7 +85,7 @@ export class ItemService {
       ^FB380,2,2
       ^FO16,450^A0N,18,18^FD${newItem.productName}^FS
       `
-      
+
       fs.appendFile('teste.txt', '\n^XA\n' + zpl + '\n^XZ', function (err) {
         if (err) throw err;
         created = true

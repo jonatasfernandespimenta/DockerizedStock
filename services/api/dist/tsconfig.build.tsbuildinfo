@@ -2407,7 +2407,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/item.service.ts": {
-        "version": "a268d70ba3f79be4c6af6a48d7f70868c134b8de364b16367844c4dc6a3950e5",
+        "version": "e65e01d961a72fc33253284bf0b122c06a30b841fd8f7227b5d38f76441ce826",
         "signature": "60a0e8b0a605b5e70f2b60920eed1060a4b907dcb38e260c12800ad0742e3b7d",
         "affectsGlobalScope": false
       },
@@ -2629,6 +2629,11 @@
       "../src/main.ts": {
         "version": "9e22823e1325070f7bbb70cb7c4490ef7d53068fab7524d0dadb21cde8e22ee4",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/common/test/testutil.ts": {
+        "version": "56381847cf70b5b9060157a98faca15099c16d9f8d9c2acfa662949991cab174",
+        "signature": "3ec197d9e297883a6bf5cbed7a8f73f9742f71c10034d0217d7c7443ee4c02e1",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -4816,6 +4821,9 @@
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../src/common/test/testutil.ts": [
+        "../src/domains/schemas/product.schema.ts"
+      ],
       "../src/controllers/item.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -6846,6 +6854,9 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/common/test/testutil.ts": [
+        "../src/domains/schemas/product.schema.ts"
+      ],
       "../src/controllers/item.controller.ts": [
         "../src/domains/item.viewmodel.ts",
         "../src/domains/schemas/item.schema.ts",
@@ -7454,6 +7465,38 @@
       "../src/app.controller.ts",
       "../src/app.module.ts",
       "../src/app.service.ts",
+      [
+        "../src/common/test/testutil.ts",
+        [
+          {
+            "file": "../src/common/test/testutil.ts",
+            "start": 144,
+            "length": 7,
+            "messageText": "A function whose declared type is neither 'void' nor 'any' must return a value.",
+            "category": 1,
+            "code": 2355
+          },
+          {
+            "file": "../src/common/test/testutil.ts",
+            "start": 178,
+            "length": 13,
+            "code": 2351,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not constructable.",
+              "category": 1,
+              "code": 2351,
+              "next": [
+                {
+                  "messageText": "Type 'Schema<Document<any, {}>, Model<any, any>, undefined>' has no construct signatures.",
+                  "category": 1,
+                  "code": 2761
+                }
+              ]
+            }
+          }
+        ]
+      ],
       "../src/controllers/item.controller.ts",
       "../src/controllers/log.controller.ts",
       "../src/controllers/product.controller.ts",
