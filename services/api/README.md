@@ -45,6 +45,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Documentation
+To get access to the docs, just go to
+```
+http://<hostname>:<port>/docs
+```
+
 ## Test
 
 ```bash
