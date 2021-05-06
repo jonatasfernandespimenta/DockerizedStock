@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
-import { LogViewModel } from 'src/domains/log.viewmodel';
-import { LogService } from 'src/services/log.service';
+import { LogViewModel } from '../domains/log.viewmodel';
+import { LogService } from '../services/log.service';
 import { runInThisContext } from 'vm';
 
 @ApiTags('logs')

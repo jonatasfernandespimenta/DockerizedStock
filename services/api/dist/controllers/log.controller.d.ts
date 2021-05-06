@@ -1,5 +1,5 @@
-import { LogViewModel } from 'src/domains/log.viewmodel';
-import { LogService } from 'src/services/log.service';
+import { LogViewModel } from '../domains/log.viewmodel';
+import { LogService } from '../services/log.service';
 export declare class LogController {
     private logService;
     constructor(logService: LogService);
