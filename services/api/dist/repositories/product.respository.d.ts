@@ -10,5 +10,5 @@ export declare class ProductRepository {
     createProduct(newProduct: ProductViewModel): Promise<Product>;
     updateProduct(newProps: any, id: any): Promise<Product>;
     updateProdutQty(newProps: any, id: any): Promise<Product>;
-    getProductByNameOrSku(param: any): Promise<Product[]>;
+    getProductByName(param: any): Promise<Product[]>;
 }

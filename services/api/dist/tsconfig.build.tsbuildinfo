@@ -2377,12 +2377,12 @@
         "affectsGlobalScope": false
       },
       "../src/repositories/product.respository.ts": {
-        "version": "0595775dc8836ca09a67df18040bfb521b5f10ba928612ea004c6b7975988bae",
-        "signature": "a426b3cefae63486516dc84301657fd912d2fb72fea74c364175c89eb9308263",
+        "version": "8ab425ff4d6aae334c5b6fe570b4cb3a7e3c575c0a5ab9d137d8608972f66181",
+        "signature": "3d0ed27b7d799e6cbb558955b1237069f633033088c93570cd8207c51ecc7bc0",
         "affectsGlobalScope": false
       },
       "../src/services/product.service.ts": {
-        "version": "6ddbeb66af062043a63e5949e6891f4607582a504870a53008929b28b180a920",
+        "version": "6baeae4bb5f30fb50e0a610fb3f7ac995c9f1f2fa3578c99b819e00143650908",
         "signature": "73c29ccb1bef63cd883bb2e692eccbc4a985b965f07f4385e0434486fb3a743f",
         "affectsGlobalScope": false
       },
@@ -2629,11 +2629,6 @@
       "../src/main.ts": {
         "version": "9e22823e1325070f7bbb70cb7c4490ef7d53068fab7524d0dadb21cde8e22ee4",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../src/common/test/testutil.ts": {
-        "version": "56381847cf70b5b9060157a98faca15099c16d9f8d9c2acfa662949991cab174",
-        "signature": "3ec197d9e297883a6bf5cbed7a8f73f9742f71c10034d0217d7c7443ee4c02e1",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -4821,9 +4816,6 @@
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
-      "../src/common/test/testutil.ts": [
-        "../src/domains/schemas/product.schema.ts"
-      ],
       "../src/controllers/item.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -6854,9 +6846,6 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
-      "../src/common/test/testutil.ts": [
-        "../src/domains/schemas/product.schema.ts"
-      ],
       "../src/controllers/item.controller.ts": [
         "../src/domains/item.viewmodel.ts",
         "../src/domains/schemas/item.schema.ts",
@@ -7465,38 +7454,6 @@
       "../src/app.controller.ts",
       "../src/app.module.ts",
       "../src/app.service.ts",
-      [
-        "../src/common/test/testutil.ts",
-        [
-          {
-            "file": "../src/common/test/testutil.ts",
-            "start": 144,
-            "length": 7,
-            "messageText": "A function whose declared type is neither 'void' nor 'any' must return a value.",
-            "category": 1,
-            "code": 2355
-          },
-          {
-            "file": "../src/common/test/testutil.ts",
-            "start": 178,
-            "length": 13,
-            "code": 2351,
-            "category": 1,
-            "messageText": {
-              "messageText": "This expression is not constructable.",
-              "category": 1,
-              "code": 2351,
-              "next": [
-                {
-                  "messageText": "Type 'Schema<Document<any, {}>, Model<any, any>, undefined>' has no construct signatures.",
-                  "category": 1,
-                  "code": 2761
-                }
-              ]
-            }
-          }
-        ]
-      ],
       "../src/controllers/item.controller.ts",
       "../src/controllers/log.controller.ts",
       "../src/controllers/product.controller.ts",

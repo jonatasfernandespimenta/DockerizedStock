@@ -11,7 +11,7 @@ export class ProductService {
   }
 
   async getByNameOrSku(params) {
-    return this.productRepository.getProductByNameOrSku(params);
+    return this.productRepository.getProductByName(params);
   }
 
   async getProduct(id) {

@@ -44,7 +44,7 @@ let ProductRepository = class ProductRepository {
     async updateProdutQty(newProps, id) {
         return await this.productCollection.findByIdAndUpdate({ _id: id }, { $set: { 'quantity': newProps.quantity } });
     }
-    async getProductByNameOrSku(param) {
+    async getProductByName(param) {
         return await this.productCollection.find({ name: { $regex: '.*' + param + '.*' } });
     }
 };
