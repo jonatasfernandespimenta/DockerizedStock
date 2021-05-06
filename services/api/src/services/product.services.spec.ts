@@ -106,7 +106,7 @@ describe('ProductService', () => {
       expect(savedProduct).toMatchObject(product);
     });
 
-    it('should return an exception when user isnt created', async() => {
+    it('should return an exception when product isnt created', async() => {
       const product = {
         "items": [],
         "sku": "Test",

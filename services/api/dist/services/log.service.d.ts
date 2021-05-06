@@ -1,4 +1,4 @@
-import { LogRepository } from 'src/repositories/log.repository';
+import { LogRepository } from '../repositories/log.repository';
 export declare class LogService {
     readonly logRepository: LogRepository;
     constructor(logRepository: LogRepository);

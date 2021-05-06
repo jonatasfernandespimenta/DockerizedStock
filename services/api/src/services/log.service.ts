@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { LogRepository } from 'src/repositories/log.repository';
+import { LogRepository } from '../repositories/log.repository';
 const dayjs = require('dayjs');
 
 const _ = require('lodash');
