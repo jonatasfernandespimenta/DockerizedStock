@@ -19,7 +19,7 @@ let ProductService = class ProductService {
     async getProducts() {
         return this.productRepository.getProducts();
     }
-    async getByNameOrSku(params) {
+    async getByName(params) {
         return this.productRepository.getProductByName(params);
     }
     async getProduct(id) {

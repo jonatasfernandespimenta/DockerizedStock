@@ -41,7 +41,7 @@ let ProductController = class ProductController {
         return this.productService.updateProductQty(product, params.id);
     }
     async getByNameOrSku(params) {
-        return this.productService.getByNameOrSku(params.param);
+        return this.productService.getByName(params.param);
     }
 };
 __decorate([

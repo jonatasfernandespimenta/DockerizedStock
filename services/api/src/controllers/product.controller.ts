@@ -54,7 +54,7 @@ export class ProductController {
   })
   @Get('/name/:param')
   async getByNameOrSku(@Param() params) {
-    return this.productService.getByNameOrSku(params.param);
+    return this.productService.getByName(params.param);
   }
 
 }
