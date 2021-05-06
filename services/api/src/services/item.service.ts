@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { ItemViewModel } from 'src/domains/item.viewmodel';
-import { ItemRepository } from 'src/repositories/item.repository';
-import { LogRepository } from 'src/repositories/log.repository';
-import { ProductRepository } from 'src/repositories/product.respository';
+import { ItemViewModel } from '../domains/item.viewmodel';
+import { ItemRepository } from '../repositories/item.repository';
+import { LogRepository } from '../repositories/log.repository';
+import { ProductRepository } from '../repositories/product.respository';
 
 const fs = require('fs');
 
@@ -31,6 +31,7 @@ export class ItemService {
     
     const productList = await this.productRepository.getProducts();
 
+
     const foundProduct = productList.find(
       product => product.sku === foundItem.sku
     );
@@ -44,14 +45,15 @@ export class ItemService {
 
       return this.itemRepository.deleteItem(id);
     })
-    return res;
+    
+    return true
 
   }
 
   async createItem(newItem: ItemViewModel) {
     console.log(newItem)
     let created = false;
-    fs.truncate('teste.txt', 0, function(){console.log('')})
+    fs.truncate('teste.txt', 0, () => null)
     await this.logRepository.createLog({ inputDate: newItem.createdAt, withdrawDate: null, quantity: newItem.quantity, sku: newItem.sku })
     const productList = await this.productRepository.getProducts();
 

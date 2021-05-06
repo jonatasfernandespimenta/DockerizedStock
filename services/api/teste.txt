@@ -1,57 +1,25 @@
 
 ^XA
 
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7a9^FS
+      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/undefined^FS
       ^FB300,2,2
       ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
+      ^FO16,450^A0N,18,18^FDAlcool Para Limpeza^FS
       
 ^XZ
 ^XA
 
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7aa^FS
+      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/undefined^FS
       ^FB300,2,2
       ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
+      ^FO16,450^A0N,18,18^FDAlcool Para Limpeza^FS
       
 ^XZ
 ^XA
 
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7ab^FS
+      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/undefined^FS
       ^FB300,2,2
       ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
-      
-^XZ
-^XA
-
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7ac^FS
-      ^FB300,2,2
-      ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
-      
-^XZ
-^XA
-
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7ad^FS
-      ^FB300,2,2
-      ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
-      
-^XZ
-^XA
-
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7ae^FS
-      ^FB300,2,2
-      ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
-      
-^XZ
-^XA
-
-      ^FO20,0^BY4,2.0,65^BQN,2,10^FDMA0http://192.168.15.161:3000/item/delete/6088103963d6c97495dac7af^FS
-      ^FB300,2,2
-      ^FB380,2,2
-      ^FO16,450^A0N,18,18^FDteste2^FS
+      ^FO16,450^A0N,18,18^FDAlcool Para Limpeza^FS
       
 ^XZ

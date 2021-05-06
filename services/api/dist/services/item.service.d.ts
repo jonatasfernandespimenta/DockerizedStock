@@ -1,7 +1,7 @@
-import { ItemViewModel } from 'src/domains/item.viewmodel';
-import { ItemRepository } from 'src/repositories/item.repository';
-import { LogRepository } from 'src/repositories/log.repository';
-import { ProductRepository } from 'src/repositories/product.respository';
+import { ItemViewModel } from '../domains/item.viewmodel';
+import { ItemRepository } from '../repositories/item.repository';
+import { LogRepository } from '../repositories/log.repository';
+import { ProductRepository } from '../repositories/product.respository';
 export declare class ItemService {
     readonly itemRepository: ItemRepository;
     readonly productRepository: ProductRepository;
@@ -10,7 +10,7 @@ export declare class ItemService {
     getItems(): Promise<import("../domains/schemas/item.schema").Item[]>;
     getItem(id: any): Promise<import("../domains/schemas/item.schema").Item>;
     updateItem(newProps: any, id: any): Promise<import("../domains/schemas/item.schema").Item>;
-    removeItem(id: any): Promise<import("../domains/schemas/item.schema").Item>;
+    removeItem(id: any): Promise<boolean>;
     createItem(newItem: ItemViewModel): Promise<{
         created: boolean;
     }>;

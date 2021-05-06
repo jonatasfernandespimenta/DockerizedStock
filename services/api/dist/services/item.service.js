@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemService = void 0;
 const common_1 = require("@nestjs/common");
-const item_viewmodel_1 = require("../domains/item.viewmodel");
 const item_repository_1 = require("../repositories/item.repository");
 const log_repository_1 = require("../repositories/log.repository");
 const product_respository_1 = require("../repositories/product.respository");
@@ -39,12 +38,12 @@ let ItemService = class ItemService {
             await this.productRepository.updateProduct({ quantity: foundProduct.quantity - 1 }, foundProduct._id);
             return this.itemRepository.deleteItem(id);
         });
-        return res;
+        return true;
     }
     async createItem(newItem) {
         console.log(newItem);
         let created = false;
-        fs.truncate('teste.txt', 0, function () { console.log(''); });
+        fs.truncate('teste.txt', 0, () => null);
         await this.logRepository.createLog({ inputDate: newItem.createdAt, withdrawDate: null, quantity: newItem.quantity, sku: newItem.sku });
         const productList = await this.productRepository.getProducts();
         for (let i = 0; i <= newItem.quantity; i++) {

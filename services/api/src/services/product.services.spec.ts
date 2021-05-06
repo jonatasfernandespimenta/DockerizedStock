@@ -69,7 +69,7 @@ describe('ProductService', () => {
     it('should return a product with same id', async () => {
       const product = validProduct;
       mockRepository.getById.mockReturnValue(product);
-      const foundProduct = await service.getProduct('60903cae3b2367bd1f449a46');
+      const foundProduct = await service.getProduct('6090278ee7201724c985a1a4');
       expect(foundProduct).toMatchObject(validProduct);
     })
   });
@@ -165,7 +165,7 @@ describe('ProductService', () => {
         ...updatedProduct
       })
 
-      const resultProduct = await service.updateProduct('60903cae3b2367bd1f449a46', {
+      const resultProduct = await service.updateProduct('6090278ee7201724c985a1a4', {
         ...product,
         name: 'Updated Name'
       });
@@ -180,7 +180,7 @@ describe('ProductService', () => {
       mockRepository.deleteProduct.mockReturnValue(product);
       mockRepository.getById.mockReturnValue(product);
 
-      const deletedProduct = await service.delProduct('60903cae3b2367bd1f449a46');
+      const deletedProduct = await service.delProduct('6090278ee7201724c985a1a4');
 
       expect(deletedProduct).toMatchObject(validProduct);
     })
