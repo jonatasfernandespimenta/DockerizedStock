@@ -2,8 +2,8 @@ import { Body, Controller, Delete, Get, Header, HttpCode, HttpStatus, Param, Pos
 import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { createReadStream } from 'fs';
 import { join } from 'path';
-import { ItemViewModel } from 'src/domains/item.viewmodel';
-import { ItemService } from 'src/services/item.service';
+import { ItemViewModel } from '../domains/item.viewmodel';
+import { ItemService } from '../services/item.service';
 
 @ApiTags('items')
 @Controller('item')

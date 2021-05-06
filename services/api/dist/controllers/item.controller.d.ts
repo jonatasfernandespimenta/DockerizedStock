@@ -1,5 +1,5 @@
-import { ItemViewModel } from 'src/domains/item.viewmodel';
-import { ItemService } from 'src/services/item.service';
+import { ItemViewModel } from '../domains/item.viewmodel';
+import { ItemService } from '../services/item.service';
 export declare class ItemController {
     private itemService;
     constructor(itemService: ItemService);
